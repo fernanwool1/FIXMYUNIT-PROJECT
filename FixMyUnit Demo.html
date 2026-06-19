@@ -377,6 +377,68 @@ tbody tr:hover{background:var(--accentL)!important}
 #screen-app .ticket-row .app-icon,
 #screen-app .em-pulse .app-icon{width:1.12em;height:1.12em;stroke-width:2.25}
 #nt-type,#nt-urgency{background:#fff!important;color:var(--ink)!important;border-color:var(--border)!important}
+.msg-shell{display:grid;grid-template-columns:280px minmax(0,1fr);width:100%;height:100%;background:var(--bg)}
+.msg-sidebar{background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;min-width:0}
+.msg-sidebar-head{padding:16px 18px;border-bottom:1px solid var(--border)}
+.msg-sidebar-head h3{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:2px}
+.msg-sidebar-head p{font-size:12px;color:var(--inkm)}
+.msg-thread-list{flex:1;overflow-y:auto;padding:10px}
+.msg-thread-btn{width:100%;padding:11px;border:1px solid transparent;border-radius:8px;background:transparent;cursor:pointer;text-align:left;margin-bottom:6px;font-family:'DM Sans',sans-serif;color:var(--ink)}
+.msg-thread-btn:hover{background:var(--surface2);border-color:var(--border)}
+.msg-thread-btn.active{background:var(--accentL)!important;border-color:#b8dec7!important}
+.msg-start{border-top:1px solid var(--border);margin-top:10px;padding-top:12px}
+.msg-start-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--inkm);margin:0 0 7px 2px}
+.msg-start-btn{width:100%;padding:8px 9px;border-radius:8px;border:1px solid transparent;background:transparent;cursor:pointer;text-align:left;display:flex;align-items:center;gap:8px;margin-bottom:4px;font-family:'DM Sans',sans-serif;color:var(--inks)}
+.msg-start-btn:hover{background:var(--surface2);border-color:var(--border)}
+.msg-chat{flex:1;display:flex;flex-direction:column;min-width:0;background:linear-gradient(180deg,#fff 0%,#f7f8fa 100%)}
+.msg-chat-head{padding:14px 18px;border-bottom:1px solid var(--border);background:#fff;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.msg-chat-head strong{display:block;font-size:14px;color:var(--ink)}
+.msg-chat-head span{display:block;font-size:11px;color:var(--inkm);text-transform:capitalize}
+.msg-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px}
+.msg-line{display:flex;gap:8px}
+.msg-line.mine{justify-content:flex-end}
+.msg-bubble{max-width:min(72%,520px)}
+.msg-text{padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.5;border:1px solid var(--border);background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.msg-line.mine .msg-text{background:var(--accent);border-color:var(--accentD);color:#fff}
+.msg-time{font-size:10px;color:var(--inkm);margin-top:3px}
+.msg-line.mine .msg-time{text-align:right}
+.msg-compose{padding:12px 18px;border-top:1px solid var(--border);background:#fff;display:flex;gap:8px;flex-shrink:0}
+.msg-compose input{flex:1}
+.market-hero{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:16px;display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+.market-hero h3{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:4px}
+.market-hero p{font-size:13px;color:var(--inks);max-width:660px}
+.market-callout{display:flex;gap:12px;align-items:flex-start;background:var(--accentL);border:1px solid #b8dec7;border-radius:8px;padding:13px 15px;margin-bottom:16px;color:var(--accentD)}
+.market-callout .app-icon{margin-top:2px;stroke-width:2.25}
+.market-filters{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap}
+.market-filter{border-radius:999px!important}
+.market-legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.market-legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--inks)}
+.market-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.market-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+.market-card.network{border-color:#9bd5b5;box-shadow:0 10px 26px rgba(22,138,74,.08)}
+.market-card-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.market-avatar{width:46px;height:46px;border-radius:10px;background:var(--accentL);color:var(--accentD);border:1px solid #b8dec7;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
+.market-card.network .market-avatar{background:var(--accent);color:#fff;border-color:var(--accentD)}
+.market-name-row{display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap}
+.market-name{font-size:14px;font-weight:800;color:var(--ink)}
+.market-meta{font-size:11px;color:var(--inkm)}
+.market-price{text-align:right;flex-shrink:0}
+.market-rating{font-size:12px;font-weight:800;color:#925f12}
+.market-rate{font-size:11px;color:var(--ink);font-weight:700}
+.market-save{font-size:9px;color:var(--accentD);font-weight:800}
+.market-badge{border-radius:999px;padding:2px 7px;font-size:9px;font-weight:800}
+.market-badge.fmu{background:var(--accent);color:#fff}
+.market-badge.verified{background:var(--accentL);color:var(--accentD);border:1px solid #b8dec7}
+.market-badge.pending{background:var(--amberL);color:var(--amberD);border:1px solid #f2d28b}
+.market-note{background:var(--accentL);border:1px solid #b8dec7;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-size:11px;color:var(--accentD);display:flex;gap:7px}
+.market-actions{display:flex;gap:8px;flex-wrap:wrap}
+#rq-ticket{background:#fff!important;color:var(--ink)!important;border-color:var(--border)!important}
+@media (max-width:860px){
+  .msg-shell{grid-template-columns:1fr;height:auto;min-height:100%}
+  .msg-sidebar{border-right:none;border-bottom:1px solid var(--border);max-height:260px}
+  .market-grid{grid-template-columns:1fr}
+  .market-hero{flex-direction:column}
+}
 .service-grid{display:grid;grid-template-columns:1fr;gap:6px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:8px}
 .service-grid label{display:flex!important;align-items:center;gap:8px;margin:0!important;padding:7px 8px;border-radius:6px;color:var(--inks)!important;font-size:12px!important;font-weight:600!important;text-transform:none!important;letter-spacing:0!important;cursor:pointer}
 .service-grid label:hover{background:var(--accentL)}
@@ -566,7 +628,7 @@ tbody tr:hover{background:var(--accentL)!important}
       </div>
       <div id="pricing-landlord">
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
-          <div style="background:var();border:2px solid var(--green);border-radius:16px;padding:28px 24px;position:relative">
+          <div style="background:#fff;border:2px solid var(--green);border-radius:16px;padding:28px 24px;position:relative">
             <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">FREE FOREVER</div>
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Starter</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">1–5 units</div>
@@ -592,7 +654,7 @@ tbody tr:hover{background:var(--accentL)!important}
             </div>
             <button class="btn btn-primary btn-sm btn-full" onclick="showScreen(&apos;login&apos;)">Try Demo</button>
           </div>
-          <div style="background:var();border:1px solid var(--border);border-radius:16px;padding:28px 24px">
+          <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 24px">
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Portfolio</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">21–50 units</div>
             <div style="margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:900">$19</span><span style="font-size:12px;color:var(--inkm)">/mo</span></div>
@@ -603,7 +665,7 @@ tbody tr:hover{background:var(--accentL)!important}
             </div>
             <button class="btn btn-secondary btn-sm btn-full" onclick="showScreen(&apos;login&apos;)">Try Demo</button>
           </div>
-          <div style="background:var();border:1px solid var(--border);border-radius:16px;padding:28px 24px">
+          <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 24px">
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Enterprise</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">50+ units</div>
             <div style="margin-bottom:20px"><span class="serif" style="font-size:22px;font-weight:900">Let&apos;s talk</span></div>
@@ -619,7 +681,7 @@ tbody tr:hover{background:var(--accentL)!important}
       </div>
       <div id="pricing-worker" style="display:none">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:640px;margin:0 auto">
-          <div style="background:var();border:2px solid var(--amber);border-radius:20px;padding:32px 28px;position:relative">
+          <div style="background:#fff;border:2px solid var(--amber);border-radius:20px;padding:32px 28px;position:relative">
             <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">INDEPENDENT</div>
             <div style="font-size:36px;margin-bottom:10px">🔨</div>
             <div class="serif" style="font-size:20px;font-weight:900;margin-bottom:6px">Solo Worker</div>
@@ -758,7 +820,7 @@ tbody tr:hover{background:var(--accentL)!important}
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
           <div class="field"><label>Full Name *</label><input id="ws-name" placeholder="Tom Kowalski" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none"/></div>
           <div class="field"><label>Trade / Specialty *</label>
-            <select id="ws-trade" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var()">
+            <select id="ws-trade" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:#fff">
               <option value="">— Select trade —</option>
               <option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Pest Control</option><option>Carpentry</option><option>Painting</option><option>Lock / Door</option><option>General Handyman</option><option>Appliance Repair</option><option>Other</option>
             </select>
@@ -1206,7 +1268,7 @@ function buildSidebar() {
     ? [{id:"dashboard",icon:"🏠",label:"Dashboard"},{id:"tickets",icon:"🎫",label:"All Tickets",badge:urgentCount,bc:"#c0392b"},{id:"calendar",icon:"📅",label:"Calendar"},{id:"announcements",icon:"📢",label:"Announcements",badge:notifCount,bc:"#2ecc71"},{id:"discussions",icon:"💬",label:"Discussions"},{id:"messages",icon:"✉️",label:"Messages",badge:dmCount,bc:"#1a351a"},{id:"workers",icon:"🔨",label:"Workers"},{id:"marketplace",icon:"🛍️",label:"Marketplace"},{id:"reports",icon:"📊",label:"Reports"},{id:"costs",icon:"💰",label:"Cost Tracker"},{id:"inspections",icon:"📋",label:"Inspections"},{id:"building",icon:"🏗️",label:"Building Setup"}]
     : u.role==="tenant"
     ? [{id:"dashboard",icon:"🏠",label:tx(lang,"dashboard")},{id:"tickets",icon:"🎫",label:tx(lang,"tickets")},{id:"calendar",icon:"📅",label:"Calendar"},{id:"announcements",icon:"📢",label:tx(lang,"announcements"),badge:notifCount,bc:"#2ecc71"},{id:"discussions",icon:"💬",label:tx(lang,"discussions")},{id:"messages",icon:"✉️",label:tx(lang,"messages"),badge:dmCount,bc:"#1a351a"},{id:"inspections",icon:"📋",label:"Inspections"},{id:"satisfaction",icon:"⭐",label:"Satisfaction"}]
-    : [{id:"dashboard",icon:"🔨",label:"My Jobs"},{id:"completed",icon:"✅",label:"Completed"},{id:"marketplace",icon:"🛍️",label:"Marketplace"}];
+    : [{id:"dashboard",icon:"🔨",label:"My Jobs"},{id:"messages",icon:"✉️",label:"Messages",badge:dmCount,bc:"#1a351a"},{id:"completed",icon:"✅",label:"Completed"},{id:"marketplace",icon:"🛍️",label:"Marketplace"}];
   document.getElementById("sidebar-nav").innerHTML = nav.map(n=>`
     <button class="nav-btn ${STATE.currentPage===n.id?"active":""}" onclick="navigate('${n.id}')">
       <span style="font-size:14px">${n.icon}</span>
@@ -1600,22 +1662,24 @@ function renderMessages() {
   const myThreads=STATE.dms.filter(d=>d.participants.includes(u.id));
   const contacts=USERS.filter(x=>x.id!==u.id&&(u.role==="landlord"||x.role==="landlord"));
   pc.innerHTML=`
-    <div style="width:205px;border-right:1px solid #1f3a1f;display:flex;flex-direction:column;background:var(--surface);flex-shrink:0">
-      <div style="padding:11px 14px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--inkm)">Messages</div>
-      <div style="flex:1;overflow-y:auto;padding:6px" id="msg-thread-list">
+    <div class="msg-shell">
+    <div class="msg-sidebar">
+      <div class="msg-sidebar-head"><h3>Messages</h3><p>${myThreads.length} conversation${myThreads.length!==1?"s":""}</p></div>
+      <div class="msg-thread-list" id="msg-thread-list">
         ${myThreads.map(th=>{
           const oth=gUser(th.participants.find(id=>id!==u.id));
           const last=th.messages[th.messages.length-1];
-          return `<button onclick="selectThread('${th.id}')" id="thread-btn-${th.id}" style="width:100%;padding:8px;border-radius:8px;border:none;background:transparent;cursor:pointer;text-align:left;margin-bottom:1px;font-family:'DM Sans',sans-serif;color:var(--ink)"><div style="display:flex;align-items:center;gap:7px">${avt(oth||{id:0,avatar:"?"},23)}<div style="flex:1;min-width:0"><div style="font-weight:600;font-size:12px;color:var(--ink)">${esc(oth?oth.name:"?")}</div><div style="font-size:10px;color:var(--inkm);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(last?last.text:"No messages")}</div></div></div></button>`;
+          return `<button onclick="selectThread('${th.id}')" id="thread-btn-${th.id}" class="msg-thread-btn"><div style="display:flex;align-items:center;gap:9px">${avt(oth||{id:0,avatar:"?"},28)}<div style="flex:1;min-width:0"><div style="font-weight:800;font-size:13px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(oth?oth.name:"?")}</div><div style="font-size:11px;color:var(--inkm);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(last?last.text:"No messages yet")}</div></div></div></button>`;
         }).join("")}
-        <div style="margin-top:7px;padding-top:7px;border-top:1px solid var(--border)">
-          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--inkm);margin-bottom:4px;padding:0 3px">Start chat</p>
-          ${contacts.filter(c=>!myThreads.find(d=>d.participants.includes(c.id))).map(ct=>`<button onclick="startDM(${ct.id})" style="width:100%;padding:5px 7px;border-radius:7px;border:none;background:transparent;cursor:pointer;text-align:left;display:flex;align-items:center;gap:6px;margin-bottom:1px;font-family:'DM Sans',sans-serif">${avt(ct,19)}<span style="font-size:11px;color:var(--inks)">${esc(ct.name)}</span></button>`).join("")}
+        <div class="msg-start">
+          <p class="msg-start-title">Start chat</p>
+          ${contacts.filter(c=>!myThreads.find(d=>d.participants.includes(c.id))).map(ct=>`<button onclick="startDM(${ct.id})" class="msg-start-btn">${avt(ct,22)}<span style="font-size:12px;font-weight:700">${esc(ct.name)}</span></button>`).join("") || `<p style="font-size:12px;color:var(--inkm);padding:2px">No new contacts available.</p>`}
         </div>
       </div>
     </div>
-    <div id="msg-chat" style="flex:1;display:flex;flex-direction:column">
-      ${emptyHTML("✉️","Select a conversation","Or start a new one from the list.")}
+    <div id="msg-chat" class="msg-chat">
+      ${emptyHTML(icon("mail"),"Select a conversation","Or start a new one from the list.")}
+    </div>
     </div>`;
   if(_activeThread) selectThread(_activeThread);
 }
@@ -1624,29 +1688,29 @@ function selectThread(id) {
   const u=STATE.currentUser;
   const thread=STATE.dms.find(d=>d.id===id);
   const other=thread?gUser(thread.participants.find(x=>x!==u.id)):null;
-  document.querySelectorAll("[id^='thread-btn-']").forEach(b=>b.style.background="transparent");
-  const btn=document.getElementById("thread-btn-"+id);if(btn)btn.style.background="var(--amberL)";
+  document.querySelectorAll("[id^='thread-btn-']").forEach(b=>b.classList.remove("active"));
+  const btn=document.getElementById("thread-btn-"+id);if(btn)btn.classList.add("active");
   if(!thread||!other){return;}
   document.getElementById("msg-chat").innerHTML=`
-    <div style="padding:11px 17px;border-bottom:1px solid var(--border);background:var(--surface);display:flex;align-items:center;gap:9px;flex-shrink:0">
-      ${avt(other,27)}
-      <div><div style="font-weight:600;font-size:13px">${esc(other.name)}</div><div style="font-size:11px;color:var(--inkm);text-transform:capitalize">${other.role}${other.unit?" · Unit "+other.unit:""}</div></div>
+    <div class="msg-chat-head">
+      ${avt(other,32)}
+      <div><strong>${esc(other.name)}</strong><span>${other.role}${other.unit?" · Unit "+other.unit:""}</span></div>
     </div>
-    <div id="msg-msgs" style="flex:1;overflow-y:auto;padding:13px 17px;display:flex;flex-direction:column;gap:8px">
+    <div id="msg-msgs" class="msg-body">
       ${thread.messages.length===0?`<p style="font-size:13px;color:var(--inkm);text-align:center;margin-top:40px">Send a message to start.</p>`:""}
       ${thread.messages.map(m=>{
         const isMe=m.userId===u.id;const mu=gUser(m.userId);
-        return `<div style="display:flex;gap:7px;justify-content:${isMe?"flex-end":"flex-start"}">
+        return `<div class="msg-line ${isMe?"mine":""}">
           ${!isMe&&mu?avt(mu,21):""}
-          <div style="max-width:72%">
-            <div style="background:${isMe?"var(--navy)":"#fff"};color:${isMe?"#fff":"var(--ink)"};padding:8px 12px;border-radius:11px;border-bottom-right-radius:${isMe?2:11}px;border-bottom-left-radius:${isMe?11:2}px;font-size:13px;border:${isMe?"none":"1px solid var(--border)"};line-height:1.5">${esc(m.text)}</div>
-            <div style="font-size:10px;color:var(--inkm);margin-top:2px;text-align:${isMe?"right":"left"}">${tAgo(m.at)}</div>
+          <div class="msg-bubble">
+            <div class="msg-text">${esc(m.text)}</div>
+            <div class="msg-time">${tAgo(m.at)}</div>
           </div>
         </div>`;
       }).join("")}
     </div>
-    <div style="padding:10px 17px;border-top:1px solid var(--border);background:var(--surface);display:flex;gap:7px;flex-shrink:0">
-      <input id="msg-input" placeholder="Message ${esc(other.name)}…" onkeydown="if(event.key==='Enter')sendMsg('${id}')" style="flex:1;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--bg);color:var(--ink)"/>
+    <div class="msg-compose">
+      <input id="msg-input" placeholder="Message ${esc(other.name)}…" onkeydown="if(event.key==='Enter')sendMsg('${id}')"/>
       <button class="btn btn-primary btn-md" onclick="sendMsg('${id}')">Send</button>
     </div>`;
   scrollMsgs();
@@ -1663,8 +1727,8 @@ function sendMsg(id) {
   const other=gUser(thread.participants.find(x=>x!==u.id));
   const m=thread.messages[thread.messages.length-1];
   const div=document.createElement("div");
-  div.style.cssText="display:flex;gap:7px;justify-content:flex-end;";
-  div.innerHTML=`<div style="max-width:72%"><div style="background:var(--bg);color:#fff;padding:8px 12px;border-radius:11px;border-bottom-right-radius:2px;font-size:13px;line-height:1.5">${esc(m.text)}</div><div style="font-size:10px;color:var(--inkm);margin-top:2px;text-align:right">just now</div></div>`;
+  div.className="msg-line mine";
+  div.innerHTML=`<div class="msg-bubble"><div class="msg-text">${esc(m.text)}</div><div class="msg-time">just now</div></div>`;
   if(msgs){msgs.appendChild(div);scrollMsgs();}
 }
 function startDM(uid) {
@@ -2348,7 +2412,11 @@ function showPricing(type) {
 // ═══════════════════════════════════════════════════════════════
 function renderMarketplace() {
   const pc = document.getElementById('page-content');
-  pc.style.overflowY = 'auto'; pc.style.padding = '22px';
+  pc.style.overflowY = 'auto';
+  pc.style.overflow = 'auto';
+  pc.style.padding = '22px';
+  pc.style.display = 'block';
+  pc.style.flexDirection = '';
   const types = [...new Set(STATE.marketplace.map(w => w.type))];
   // Merge in any workers who signed up via the demo
   const signupWorkers = USERS.filter(u => u.role === 'worker' && u.trade && !STATE.marketplace.find(m => m.name === u.name));
@@ -2363,23 +2431,26 @@ function renderMarketplace() {
   ];
   const allTypes = [...new Set(fullMkt.map(w => w.type))];
   pc.innerHTML = `
-    <div style="background:var(--bg2);border-radius:14px;padding:19px 22px;margin-bottom:18px;color:#fff">
-      <div class="serif" style="font-size:19px;font-weight:900;margin-bottom:3px">🛍️ Contractor Marketplace</div>
-      <p style="font-size:13px;color:var(--inks)">Find verified local repair professionals. <span style="color:var(--accent);font-weight:700">FixMyUnit Network workers</span> are pre-vetted and typically 10–20% below market rate — they pay us 5% so you save more.</p>
+    <div class="market-hero">
+      <div>
+        <h3>${icon("cart")} Contractor Marketplace</h3>
+        <p>Find verified local repair professionals. <strong style="color:var(--accentD)">FixMyUnit Network workers</strong> are pre-vetted and typically 10–20% below market rate.</p>
+      </div>
+      <button class="btn btn-secondary btn-sm" onclick="showScreen('worker-signup')">Invite Worker</button>
     </div>
-    <div style="display:flex;gap:10px;align-items:center;margin-bottom:18px;background:var(--accentL);border:1px solid rgba(232,130,12,.3);border-radius:10px;padding:12px 16px">
-      <div style="font-size:24px">💡</div>
-      <div><div style="font-weight:700;font-size:13px;color:var(--accentD)">How the network saves you money</div><div style="font-size:12px;color:var(--inks);line-height:1.5">Network workers get steady jobs from us — so they charge less. A typical plumber outside the network charges $120–$150/hr. Network plumbers average $80–$100/hr. <strong>You save, they stay busy. Everyone wins.</strong></div></div>
+    <div class="market-callout">
+      ${icon("info")}
+      <div><div style="font-weight:800;font-size:13px;margin-bottom:2px">How the network saves you money</div><div style="font-size:12px;color:var(--inks);line-height:1.5">Network workers get steady jobs through FixMyUnit, so they charge less. A typical plumber outside the network charges $120–$150/hr. Network plumbers average $80–$100/hr.</div></div>
     </div>
-    <div style="display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap" id="mkt-filters">
-      <button onclick="setMktFilter('all')" id="mf-all" class="btn btn-sm" style="border-radius:100px;background:var(--bg);color:#fff;border:1.5px solid var(--navy)">All</button>
-      ${allTypes.map(t => `<button onclick="setMktFilter('${esc(t)}')" id="mf-${esc(t)}" class="btn btn-secondary btn-sm" style="border-radius:100px">${esc(t)}</button>`).join('')}
+    <div class="market-filters" id="mkt-filters">
+      <button onclick="setMktFilter('all')" id="mf-all" class="btn btn-sm market-filter" style="background:var(--ink);color:#fff;border:1.5px solid var(--ink)">All</button>
+      ${allTypes.map(t => `<button onclick="setMktFilter('${esc(t)}')" id="mf-${esc(t)}" class="btn btn-secondary btn-sm market-filter">${esc(t)}</button>`).join('')}
     </div>
-    <div style="display:flex;gap:8px;margin-bottom:16px">
-      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><span style="background:var(--accent);color:#fff;border-radius:4px;padding:2px 6px;font-size:9px;font-weight:700">FMU</span><span style="color:var(--inks)">= FixMyUnit Network (vetted, lower rates)</span></div>
-      <div style="display:flex;align-items:center;gap:5px;font-size:11px"><span style="background:var(--accentL);color:var(--accent);border-radius:4px;padding:2px 6px;font-size:9px;font-weight:700">✓ VERIFIED</span><span style="color:var(--inks)">= License checked</span></div>
+    <div class="market-legend">
+      <div class="market-legend-item"><span class="market-badge fmu">FMU</span><span>FixMyUnit Network</span></div>
+      <div class="market-legend-item"><span class="market-badge verified">${icon("check")} Verified</span><span>License checked</span></div>
     </div>
-    <div id="mkt-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:13px">${buildMktGrid2('all', fullMkt)}</div>`;
+    <div id="mkt-grid" class="market-grid">${buildMktGrid2('all', fullMkt)}</div>`;
   // store fullMkt globally for filter
   window._fullMkt = fullMkt;
 }
@@ -2395,27 +2466,27 @@ function buildMktGrid2(type, workers) {
   return sorted2.map(w => {
     const isNetwork = w.network !== false && w.verified;
     const isPending = w.pendingApproval;
-    return `<div class="card" style="border:${isNetwork?'2px solid var(--amber)':'1px solid var(--border)'}">
-      <div style="display:flex;gap:11px;align-items:flex-start;margin-bottom:11px">
-        <div style="width:44px;height:44px;border-radius:9px;background:${isNetwork?'var(--amber)':'var(--navyS)'};color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">${esc(w.av)}</div>
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;gap:5px;margin-bottom:3px;flex-wrap:wrap">
-            <div class="serif" style="font-size:13px;font-weight:700">${esc(w.name)}</div>
-            ${isNetwork ? `<span style="background:var(--accent);color:#fff;border-radius:4px;padding:2px 6px;font-size:9px;font-weight:700">FMU</span>` : ''}
-            ${w.verified ? `<span style="background:var(--accentL);color:var(--accent);border-radius:4px;padding:2px 6px;font-size:9px;font-weight:700">✓ VERIFIED</span>` : ''}
-            ${isPending ? `<span style="background:var(--amberL);color:#c2410c;border-radius:4px;padding:2px 6px;font-size:9px;font-weight:700">PENDING</span>` : ''}
+    return `<div class="market-card ${isNetwork?'network':''}">
+      <div class="market-card-head">
+        <div class="market-avatar">${esc(w.av)}</div>
+        <div style="flex:1;min-width:0">
+          <div class="market-name-row">
+            <div class="market-name">${esc(w.name)}</div>
+            ${isNetwork ? `<span class="market-badge fmu">FMU</span>` : ''}
+            ${w.verified ? `<span class="market-badge verified">${icon("check")} Verified</span>` : ''}
+            ${isPending ? `<span class="market-badge pending">Pending</span>` : ''}
           </div>
-          <div style="font-size:11px;color:var(--inkm)">${esc(w.type)} · ${w.jobs > 0 ? w.jobs+' jobs' : 'New'}</div>
+          <div class="market-meta">${esc(w.type)} · ${w.jobs > 0 ? w.jobs+' jobs' : 'New profile'}</div>
         </div>
-        <div style="text-align:right;flex-shrink:0">
-          ${w.rating ? `<div style="font-size:12px;font-weight:700;color:#f59e0b">★ ${w.rating}</div>` : `<div style="font-size:10px;color:var(--inkm)">No ratings yet</div>`}
-          <div style="font-size:11px;color:${isNetwork?'var(--amber)':'var(--inkm)'};font-weight:${isNetwork?700:400}">${esc(w.price)}</div>
-          ${isNetwork ? `<div style="font-size:9px;color:var(--accent);font-weight:700">~15% below avg</div>` : ''}
+        <div class="market-price">
+          ${w.rating ? `<div class="market-rating">${icon("star")} ${w.rating}</div>` : `<div style="font-size:10px;color:var(--inkm)">No ratings yet</div>`}
+          <div class="market-rate">${esc(w.price)}</div>
+          ${isNetwork ? `<div class="market-save">~15% below avg</div>` : ''}
         </div>
       </div>
       <p style="font-size:12px;color:var(--inks);margin-bottom:11px;line-height:1.5">${esc(w.bio)}</p>
-      ${isNetwork ? `<div style="background:var(--accentL);border-radius:8px;padding:8px 11px;margin-bottom:11px;font-size:11px;color:var(--accentD);display:flex;gap:6px"><span>💡</span><span>Network rate — 5% goes to FixMyUnit, you save vs. hiring outside.</span></div>` : ''}
-      <div style="display:flex;gap:7px">
+      ${isNetwork ? `<div class="market-note">${icon("info")}<span>Network rate includes FixMyUnit's 5% platform fee, so pricing stays predictable.</span></div>` : ''}
+      <div class="market-actions">
         <button class="btn ${isNetwork?'btn-primary':'btn-secondary'} btn-sm" onclick="requestQuoteModal('${esc(w.name)}','${esc(w.price)}')">Request Quote</button>
         <button class="btn btn-secondary btn-sm" onclick="alert('Worker profile — full version!')">View Profile</button>
       </div>
@@ -2425,18 +2496,18 @@ function buildMktGrid2(type, workers) {
 
 function setMktFilter(type) {
   document.querySelectorAll("[id^='mf-']").forEach(b => { b.style.background='transparent'; b.style.color='var(--inkm)'; b.style.border='1.5px solid var(--border)'; });
-  const a = document.getElementById('mf-'+type); if(a){a.style.background='var(--navy)';a.style.color='#fff';a.style.border='1.5px solid var(--navy)';}
+  const a = document.getElementById('mf-'+type); if(a){a.style.background='var(--ink)';a.style.color='#fff';a.style.border='1.5px solid var(--ink)';}
   document.getElementById('mkt-grid').innerHTML = buildMktGrid2(type, window._fullMkt || STATE.marketplace);
 }
 
 function requestQuoteModal(name, price) {
   const body = `
-    <div style="background:var(--bg);border-radius:9px;padding:11px 13px;margin-bottom:14px;display:flex;gap:9px;align-items:center">
-      <div style="font-size:24px">🔨</div>
+    <div style="background:var(--accentL);border:1px solid #b8dec7;border-radius:9px;padding:11px 13px;margin-bottom:14px;display:flex;gap:9px;align-items:center;color:var(--accentD)">
+      ${icon("wrench")}
       <div><div style="font-weight:600;font-size:13px">${esc(name)}</div><div style="font-size:11px;color:var(--inkm)">${esc(price)}</div></div>
     </div>
     <div class="field"><label>Which ticket is this for?</label>
-      <select id="rq-ticket" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var()">
+      <select id="rq-ticket" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:#fff">
         <option value="">— Select ticket —</option>
         ${STATE.tickets.filter(t=>!['completed','closed'].includes(t.status)).map(t=>`<option value="${t.id}">${t.id}: ${esc(t.title)}</option>`).join('')}
         <option value="new">New / General inquiry</option>
