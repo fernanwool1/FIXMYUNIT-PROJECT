@@ -213,6 +213,186 @@ input:focus, textarea:focus, select:focus {
 .em-pulse { animation: emPulse 1.2s infinite; }
 @keyframes emPulse { 0%,100%{background:#7b1515}50%{background:#c0392b} }
 /* Message bubbles mine */
+
+/* Modern accessibility pass */
+:root{
+  --bg:#f7f8fa;
+  --bg2:#eef2f1;
+  --surface:#ffffff;
+  --surface2:#f9fafb;
+  --border:#d7dde2;
+  --ink:#17211b;
+  --inks:#405047;
+  --inkm:#66746d;
+  --accent:#168a4a;
+  --accentD:#0f6d3a;
+  --accentL:#e8f6ee;
+  --accentText:#ffffff;
+  --red:#c7352f;
+  --redL:#fff0ef;
+  --amber:#b7791f;
+  --amberL:#fff7e6;
+  --amberD:#85580f;
+  --blue:#2563eb;
+  --blueL:#eff6ff;
+  --green:#168a4a;
+  --greenL:#e8f6ee;
+  --white:#ffffff;
+  --navy:#17211b;
+  --navyM:#405047;
+  --navyS:#e7ece9;
+  --inks2:#405047;
+  --border2:#d7dde2;
+}
+html,body{font-family:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg)!important;color:var(--ink)!important}
+.serif{font-family:'DM Sans',system-ui,sans-serif!important;letter-spacing:0!important;color:inherit!important}
+.mono{font-family:'DM Mono',ui-monospace,monospace!important;color:var(--inkm)!important}
+#screen-home,#screen-login,#screen-app,#screen-worker-signup,#page-content,.screen{background:var(--bg)!important}
+.home-nav{background:rgba(255,255,255,.94)!important;border-bottom:1px solid var(--border)!important;box-shadow:0 1px 12px rgba(15,23,42,.05)}
+.home-hero{background:linear-gradient(180deg,#fff 0%,#f7faf8 100%)!important}
+.home-hero h1{color:var(--ink)!important}
+.home-hero [style*="Free demo inside"]{background:var(--accentL)!important;border-color:#bfe6cf!important;color:var(--accentD)!important}
+.card,.modal-box,.confirm-box{background:var(--surface)!important;border:1px solid var(--border)!important;border-radius:8px!important;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+.card{padding:18px!important}
+.badge{border-radius:999px!important;font-weight:700!important}
+.btn{border-radius:8px!important;transition:background .15s,border-color .15s,box-shadow .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary,.btn-success{background:var(--accent)!important;color:#fff!important;border:1px solid var(--accent)!important}
+.btn-secondary,.btn-ghost{background:#fff!important;color:var(--inks)!important;border:1px solid var(--border)!important}
+.btn-navy{background:var(--ink)!important;color:#fff!important;border:1px solid var(--ink)!important}
+.btn-danger{background:var(--red)!important;color:#fff!important}
+input,textarea,select{background:#fff!important;color:var(--ink)!important;border-color:var(--border)!important;border-radius:8px!important}
+input::placeholder,textarea::placeholder{color:#87928c!important}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(22,138,74,.14)!important}
+table,th,td{color:var(--ink)!important;border-color:var(--border)!important}
+thead tr{background:#f1f5f3!important}
+tbody tr:nth-child(even),tbody tr:nth-child(odd){background:#fff!important}
+tbody tr:hover{background:var(--accentL)!important}
+#sidebar{background:#0f1f17!important;color:#dfeee5!important;border-right:1px solid #183324}
+#sidebar [style*="color:#fff"],#sidebar .serif{color:#f7fff9!important}
+#sidebar .mono,#sidebar [style*="color:var(--inkm)"]{color:#9ab5a5!important}
+#sidebar-nav{padding:10px 8px!important}
+.nav-btn{color:#b9c9bf!important;font-size:13px!important;font-weight:600!important;border-radius:8px!important;padding:10px 11px!important}
+.nav-btn:hover{background:rgba(255,255,255,.07)!important;color:#fff!important}
+.nav-btn.active{background:#e8f6ee!important;color:#0f6d3a!important}
+.nav-badge{background:var(--red)!important;color:#fff!important}
+#topbar{background:#fff!important;border-bottom:1px solid var(--border)!important;padding:18px 24px!important}
+#topbar h2{color:var(--ink)!important}
+#page-content{background:var(--bg)!important}
+.ticket-row{background:#fff!important;border-color:var(--border)!important;border-radius:8px!important;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.ticket-row:hover{border-color:#9bd5b5!important;box-shadow:0 10px 24px rgba(15,23,42,.08)}
+.ticket-row.emergency{background:var(--redL)!important;border-color:#f1b2ae!important}
+.tabs{border-bottom:1px solid var(--border)!important}
+.tab-btn{color:var(--inkm)!important;border-radius:8px!important}
+.tab-btn.active{background:var(--ink)!important;color:#fff!important}
+.empty{color:var(--inkm)!important}
+.empty-icon{width:54px;height:54px;border-radius:14px;background:var(--accentL);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px!important;font-size:0!important}
+.empty-title{font-family:'DM Sans',system-ui,sans-serif!important;color:var(--ink)!important}
+#reminders-bar{background:var(--amberL)!important;border-color:#f2d28b!important}
+#toast{background:var(--accent)!important;color:#fff!important;border-radius:8px!important}
+.modal-title{font-family:'DM Sans',system-ui,sans-serif!important;color:var(--ink)!important}
+.modal-overlay,.confirm-overlay{background:rgba(15,23,42,.56)!important}
+.star-btn{font-size:19px!important;color:#cbd5e1!important}
+.star-btn.lit{color:#d97706!important}
+.app-icon{width:1em;height:1em;display:inline-block;vertical-align:-.14em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.icon-box{font-size:18px!important;color:var(--accent)!important;background:var(--accentL)!important;border:1px solid #c8ead6!important}
+.icon-box .app-icon{width:1.1em;height:1.1em}
+[data-icon-brand]{color:#fff!important;background:var(--accent)!important;border-radius:8px}
+#screen-home .home-nav > div:first-child > div:first-child:has(.app-icon),
+#screen-home footer div[style*="width:22px"]:has(.app-icon){
+  background:var(--accent)!important;
+  color:#fff!important;
+  border:1px solid var(--accentD)!important;
+}
+#screen-home .home-nav > div:first-child > div:first-child .app-icon,
+#screen-home footer div[style*="width:22px"] .app-icon{stroke-width:2.25}
+#screen-home .home-hero div:has(> .app-icon),
+#screen-home .problem-grid .card > div:first-child:has(.app-icon),
+#screen-home .feature-grid > div > div:first-child:has(.app-icon),
+#screen-home .role-card > div:first-child:has(.app-icon),
+#screen-home #workers div[style*="width:36px"][style*="height:36px"]:has(.app-icon),
+#screen-home section[style*="text-align:center"] > div:has(> .app-icon){
+  background:var(--accentL)!important;
+  border:1px solid #b8dec7!important;
+  color:var(--accentD)!important;
+}
+#screen-home .problem-grid .card > div:first-child:has(.app-icon),
+#screen-home section[style*="text-align:center"] > div:has(> .app-icon){
+  width:44px!important;
+  height:44px!important;
+  border-radius:10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-shrink:0!important;
+}
+#screen-home .feature-grid > div > div:first-child:has(.app-icon),
+#screen-home #workers div[style*="width:36px"][style*="height:36px"]:has(.app-icon){
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
+}
+#screen-home .role-card > div:first-child:has(.app-icon){
+  color:#fff!important;
+  background:var(--accent)!important;
+  border:1px solid var(--accentD)!important;
+}
+#screen-home .feature-grid .app-icon,
+#screen-home .problem-grid .app-icon,
+#screen-home .role-card .app-icon,
+#screen-home #workers .app-icon{width:1.12em;height:1.12em;stroke-width:2.25}
+#screen-app .card > div:first-child:has(> .app-icon),
+#screen-app .ticket-row > div:first-child:has(.app-icon),
+#screen-app #reminders-bar .app-icon{
+  background:var(--accentL)!important;
+  border:1px solid #b8dec7!important;
+  color:var(--accentD)!important;
+}
+#screen-app .card > div:first-child:has(> .app-icon),
+#screen-app .ticket-row > div:first-child:has(.app-icon){
+  width:40px!important;
+  height:40px!important;
+  border-radius:10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-shrink:0!important;
+}
+#screen-app .ticket-row > div:first-child:has(.app-icon){width:36px!important;height:36px!important}
+#screen-app .card[style*="var(--redL)"] > div:first-child:has(> .app-icon),
+#screen-app .ticket-row.emergency > div:first-child:has(.app-icon),
+#screen-app .em-pulse > span:has(.app-icon){
+  background:var(--redL)!important;
+  border:1px solid #efb5b1!important;
+  color:var(--red)!important;
+}
+#screen-app .em-pulse > span:has(.app-icon){
+  width:40px!important;
+  height:40px!important;
+  border-radius:10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-shrink:0!important;
+}
+#screen-app .card .app-icon,
+#screen-app .ticket-row .app-icon,
+#screen-app .em-pulse .app-icon{width:1.12em;height:1.12em;stroke-width:2.25}
+#nt-type,#nt-urgency{background:#fff!important;color:var(--ink)!important;border-color:var(--border)!important}
+.service-grid{display:grid;grid-template-columns:1fr;gap:6px;border:1px solid var(--border);border-radius:8px;background:#fff;padding:8px}
+.service-grid label{display:flex!important;align-items:center;gap:8px;margin:0!important;padding:7px 8px;border-radius:6px;color:var(--inks)!important;font-size:12px!important;font-weight:600!important;text-transform:none!important;letter-spacing:0!important;cursor:pointer}
+.service-grid label:hover{background:var(--accentL)}
+.service-grid input{width:auto!important;margin:0;accent-color:var(--accent)}
+#screen-worker-signup select{background:#fff!important;color:var(--ink)!important;border-color:var(--border)!important}
+@media (max-width:760px){
+  .home-nav{padding:12px 16px!important}
+  .home-nav a{display:none}
+  .home-hero{padding:56px 20px 44px!important}
+  .home-hero h1{font-size:38px!important}
+  .feature-grid,.price-grid,.stat-grid,.problem-grid{grid-template-columns:1fr!important}
+  #screen-app.active{flex-direction:column!important}
+  #sidebar{width:100%!important;height:auto!important;max-height:42vh}
+  #sidebar-nav{display:flex!important;overflow-x:auto!important;gap:6px}
+  .nav-btn{min-width:max-content!important}
+}
 </style>
 </head>
 <body>
@@ -280,11 +460,11 @@ input:focus, textarea:focus, select:focus {
   </section>
 
   <!-- FEATURES -->
-  <section id="features" style="padding:72px 32px;background:var(--surface)">
+  <section id="features" style="padding:72px 32px;background:var(--surface2)">
     <div style="max-width:960px;margin:0 auto">
       <div style="text-align:center;margin-bottom:48px">
         <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:12px">Features</div>
-        <h2 class="serif" style="font-size:36px;font-weight:900;margin-bottom:12px">Everything in one platform.</h2>
+        <h2 class="serif" style="font-size:36px;font-weight:900;margin-bottom:12px;color:var(--ink)">Everything in one platform.</h2>
         <p style="font-size:15px;color:var(--inks);line-height:1.7">Built specifically for apartment buildings. Not adapted from enterprise software.</p>
       </div>
       <div class="feature-grid">
@@ -331,9 +511,9 @@ input:focus, textarea:focus, select:focus {
           <h2 class="serif" style="font-size:36px;font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:18px">Get steady work.<br/>Keep 95% of every job.</h2>
           <p style="font-size:15px;color:var(--inks);line-height:1.75;margin-bottom:28px">Join the FixMyUnit network and get connected to landlords in your area — no lead fees, no monthly cost. We only take 5% when you get paid. Compare that to Angi&apos;s $15–$80 per lead with no guarantee.</p>
           <div style="display:flex;flex-direction:column;gap:13px;margin-bottom:32px">
-            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔁</div><div><div style="font-weight:700;color:#fff;font-size:14px;margin-bottom:3px">Recurring jobs, not one-off leads</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Buildings need repairs every month. One landlord relationship means steady income, not constant marketing.</div></div></div>
-            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⭐</div><div><div style="font-weight:700;color:#fff;font-size:14px;margin-bottom:3px">Build your reputation</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Tenant ratings and job history build your profile. The better you work, the more jobs you get.</div></div></div>
-            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">💰</div><div><div style="font-weight:700;color:#fff;font-size:14px;margin-bottom:3px">Get paid fast, no chasing</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Submit your invoice in the app. Landlord approves. Money hits your account. No invoicing headaches.</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔁</div><div><div style="font-weight:700;color:var(--accent);font-size:14px;margin-bottom:3px">Recurring jobs, not one-off leads</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Buildings need repairs every month. One landlord relationship means steady income, not constant marketing.</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⭐</div><div><div style="font-weight:700;color:var(--accent);;font-size:14px;margin-bottom:3px">Build your reputation</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Tenant ratings and job history build your profile. The better you work, the more jobs you get.</div></div></div>
+            <div style="display:flex;gap:14px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:9px;background:rgba(232,130,12,.2);border:1px solid rgba(232,130,12,.3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">💰</div><div><div style="font-weight:700;color:var(--accent);font-size:14px;margin-bottom:3px">Get paid fast, no chasing</div><div style="font-size:13px;color:var(--inks);line-height:1.6">Submit your invoice in the app. Landlord approves. Money hits your account. No invoicing headaches.</div></div></div>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn-primary btn-lg" onclick="showScreen(&apos;worker-signup&apos;)" style="font-size:15px">Join as a Worker →</button>
@@ -360,7 +540,7 @@ input:focus, textarea:focus, select:focus {
           <div style="background:var(--accentL);border:1px solid var(--border);border-radius:16px;padding:20px 24px">
             <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:12px">Example Monthly Earnings</div>
             <div style="display:flex;flex-direction:column;gap:8px">
-              <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--inks)">8 jobs × avg $180</span><span style="color:#fff;font-weight:700">$1,440 total</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--inks)">8 jobs × avg $180</span><span style="color: var(--inks);font-weight:700">$1,440 total</span></div>
               <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--inks)">FixMyUnit cut (5%)</span><span style="color:var(--accent);font-weight:700">− $72</span></div>
               <div style="height:1px;background:rgba(255,255,255,.1);margin:4px 0"></div>
               <div style="display:flex;justify-content:space-between"><span class="serif" style="font-size:18px;font-weight:900;color:#fff">You keep</span><span class="serif" style="font-size:22px;font-weight:900;color:var(--accent)">$1,368</span></div>
@@ -386,11 +566,11 @@ input:focus, textarea:focus, select:focus {
       </div>
       <div id="pricing-landlord">
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
-          <div style="background:var(--surface);border:2px solid var(--green);border-radius:16px;padding:28px 24px;position:relative">
+          <div style="background:var();border:2px solid var(--green);border-radius:16px;padding:28px 24px;position:relative">
             <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">FREE FOREVER</div>
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Starter</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">1–5 units</div>
-            <div style="margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:900;color:var(--accent)">$0</span><span style="font-size:12px;color:var(--inkm)">/mo</span></div>
+            <div style="margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:900;color:var(--accent)">$0</span><span style="font-size:12px;color:var(--accent)">/mo</span></div>
             <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:20px">
               <div style="font-size:12px;color:var(--inks);display:flex;gap:6px"><span style="color:var(--accent);font-weight:700">✓</span>All core features</div>
               <div style="font-size:12px;color:var(--inks);display:flex;gap:6px"><span style="color:var(--accent);font-weight:700">✓</span>Unlimited tenants</div>
@@ -412,7 +592,7 @@ input:focus, textarea:focus, select:focus {
             </div>
             <button class="btn btn-primary btn-sm btn-full" onclick="showScreen(&apos;login&apos;)">Try Demo</button>
           </div>
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 24px">
+          <div style="background:var();border:1px solid var(--border);border-radius:16px;padding:28px 24px">
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Portfolio</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">21–50 units</div>
             <div style="margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:900">$19</span><span style="font-size:12px;color:var(--inkm)">/mo</span></div>
@@ -423,7 +603,7 @@ input:focus, textarea:focus, select:focus {
             </div>
             <button class="btn btn-secondary btn-sm btn-full" onclick="showScreen(&apos;login&apos;)">Try Demo</button>
           </div>
-          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 24px">
+          <div style="background:var();border:1px solid var(--border);border-radius:16px;padding:28px 24px">
             <div class="serif" style="font-size:17px;font-weight:700;margin-bottom:4px">Enterprise</div>
             <div style="font-size:11px;color:var(--inkm);margin-bottom:16px">50+ units</div>
             <div style="margin-bottom:20px"><span class="serif" style="font-size:22px;font-weight:900">Let&apos;s talk</span></div>
@@ -439,7 +619,7 @@ input:focus, textarea:focus, select:focus {
       </div>
       <div id="pricing-worker" style="display:none">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:640px;margin:0 auto">
-          <div style="background:var(--surface);border:2px solid var(--amber);border-radius:20px;padding:32px 28px;position:relative">
+          <div style="background:var();border:2px solid var(--amber);border-radius:20px;padding:32px 28px;position:relative">
             <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">INDEPENDENT</div>
             <div style="font-size:36px;margin-bottom:10px">🔨</div>
             <div class="serif" style="font-size:20px;font-weight:900;margin-bottom:6px">Solo Worker</div>
@@ -459,7 +639,7 @@ input:focus, textarea:focus, select:focus {
             <button class="btn btn-primary btn-md btn-full" onclick="showScreen(&apos;worker-signup&apos;)">Join as Worker →</button>
           </div>
           <div style="background:var(--bg);border:2px solid var(--navyM);border-radius:20px;padding:32px 28px;position:relative">
-            <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accentL);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">COMPANY</div>
+            <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap">COMPANY</div>
             <div style="font-size:36px;margin-bottom:10px">🏢</div>
             <div class="serif" style="font-size:20px;font-weight:900;color:#fff;margin-bottom:6px">Repair Company</div>
             <div style="font-size:13px;color:rgba(255,255,255,.65);margin-bottom:20px;line-height:1.65">You have a team. Add employees, set company-wide rates, and manage all jobs from one owner dashboard.</div>
@@ -513,12 +693,12 @@ input:focus, textarea:focus, select:focus {
       <span class="serif" style="font-weight:700;font-size:14px;color:#fff">Fix<span style="color:var(--accent)">My</span>Unit</span>
     </div>
     <div style="display:flex;gap:20px;justify-content:center;margin-bottom:12px">
-      <a href="#features" style="font-size:12px;color:rgba(46,204,113,.5);text-decoration:none">Features</a>
-      <a href="#workers" style="font-size:12px;color:rgba(46,204,113,.5);text-decoration:none">For Workers</a>
-      <a href="#pricing" style="font-size:12px;color:rgba(46,204,113,.5);text-decoration:none">Pricing</a>
-      <a href="#" onclick="showScreen(&apos;worker-signup&apos;)" style="font-size:12px;color:rgba(46,204,113,.5);text-decoration:none">Join as Worker</a>
+      <a href="#features" style="font-size:12px;color:rgba(46,204,113,1);text-decoration:none">Features</a>
+      <a href="#workers" style="font-size:12px;color:rgba(46,204,113,1);text-decoration:none">For Workers</a>
+      <a href="#pricing" style="font-size:12px;color:rgba(46,204,113,1);text-decoration:none">Pricing</a>
+      <a href="#" onclick="showScreen(&apos;worker-signup&apos;)" style="font-size:12px;color:rgba(46,204,113,1);text-decoration:none">Join as Worker</a>
     </div>
-    <p style="font-size:12px;color:rgba(76,175,80,.35)">Apartment repairs, organized. · Built for NYC buildings · Demo version · hello@fixmyunit.com</p>
+    <p style="font-size:12px;color:rgba(76,175,80,1)">Apartment repairs, organized. · Built for NYC buildings · Demo version · hello@fixmyunit.com</p>
   </footer>
 </div>
 
@@ -526,7 +706,7 @@ input:focus, textarea:focus, select:focus {
      SCREEN 2: LOGIN
 ════════════════════════════════════════════════════════════ -->
 <div id="screen-login" style="background:var(--bg2);align-items:center;justify-content:center;padding:20px;min-height:100vh;position:relative">
-  <button onclick="showScreen('home')" style="position:fixed;top:16px;left:16px;z-index:200;display:flex;align-items:center;gap:6px;padding:8px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer;backdrop-filter:blur(4px)">← Back to Home</button>
+  <button onclick="showScreen('home')" style="position:fixed;top:16px;left:16px;z-index:200;display:flex;align-items:center;gap:6px;padding:8px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--white);cursor:pointer;backdrop-filter:blur(4px)">← Back to Home</button>
   <div class="fade-in" style="width:100%;max-width:400px">
     <div style="text-align:center;margin-bottom:24px">
       <div style="width:44px;height:44px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:21px;margin:0 auto 10px">🔧</div>
@@ -578,7 +758,7 @@ input:focus, textarea:focus, select:focus {
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
           <div class="field"><label>Full Name *</label><input id="ws-name" placeholder="Tom Kowalski" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none"/></div>
           <div class="field"><label>Trade / Specialty *</label>
-            <select id="ws-trade" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--surface)">
+            <select id="ws-trade" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var()">
               <option value="">— Select trade —</option>
               <option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Pest Control</option><option>Carpentry</option><option>Painting</option><option>Lock / Door</option><option>General Handyman</option><option>Appliance Repair</option><option>Other</option>
             </select>
@@ -608,9 +788,15 @@ input:focus, textarea:focus, select:focus {
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
           <div class="field"><label>Services Offered</label>
-            <select id="ws-coservices" multiple style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;height:90px">
-              <option>Plumbing</option><option>Electrical</option><option>HVAC</option><option>Pest Control</option><option>Carpentry</option><option>Painting</option><option>General Maintenance</option>
-            </select>
+            <div id="ws-coservices" class="service-grid" role="group" aria-label="Services offered">
+              <label><input type="checkbox" value="Plumbing"/>Plumbing</label>
+              <label><input type="checkbox" value="Electrical"/>Electrical</label>
+              <label><input type="checkbox" value="HVAC"/>HVAC</label>
+              <label><input type="checkbox" value="Pest Control"/>Pest Control</label>
+              <label><input type="checkbox" value="Carpentry"/>Carpentry</label>
+              <label><input type="checkbox" value="Painting"/>Painting</label>
+              <label><input type="checkbox" value="General Maintenance"/>General Maintenance</label>
+            </div>
           </div>
           <div class="field"><label>Number of Employees</label>
             <select id="ws-cosize" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--surface)">
@@ -814,7 +1000,7 @@ const UCFG = {urgent:{label:"Urgent",col:"#c0392b",bg:"#fdecea"},medium:{label:"
 const TYPES = ["Plumbing","Electrical","HVAC","Pest","Structural","Appliance","Lock/Door","Other"];
 const TICON = {Plumbing:"🚿",Electrical:"⚡",HVAC:"🌡️",Pest:"🐜",Structural:"🏗️",Appliance:"🔌","Lock/Door":"🔑",Other:"🔧"};
 const ETYPES = ["Gas Smell","No Heat (Winter)","Flooding","Fire/Electrical Danger","Locked Out","Broken Front Door Lock","Carbon Monoxide","Major Water Leak"];
-const DCATS = [{v:"maintenance",l:"🔧 Maintenance"},{v:"package",l:"📦 Package"},{v:"noise",l:"🔊 Noise"},{v:"security",l:"🔒 Security"},{v:"cleanliness",l:"🧹 Cleanliness"},{v:"other",l:"💬 Other"}];
+const DCATS = [{v:"maintenance",l:"Maintenance"},{v:"package",l:"Package"},{v:"noise",l:"Noise"},{v:"security",l:"Security"},{v:"cleanliness",l:"Cleanliness"},{v:"other",l:"Other"}];
 const ISECS = ["Kitchen","Bathroom","Bedroom","Living Room","Floors","Walls","Appliances"];
 const AVT_COLS = ["#1565c0","#2e7d32","#6a1b9a","#00695c","#c62828"];
 const TR = {
@@ -845,17 +1031,97 @@ const calcPri = t => {
 const isRepeat = (unit,type) => STATE.tickets.filter(t=>t.unit===unit&&t.type===type).length>=3;
 const sorted = arr => [...arr].sort((a,b)=>(b.priorityScore||0)-(a.priorityScore||0));
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const ICONS = {
+  wrench:`<path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.8-2.8 2.3-2.7Z"/>`,
+  building:`<path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/><path d="M16 13h1"/><path d="M16 17h1"/>`,
+  message:`<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/>`,
+  file:`<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/>`,
+  clock:`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`,
+  phone:`<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z"/>`,
+  ticket:`<path d="M2 9a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/>`,
+  alert:`<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>`,
+  calendar:`<path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/>`,
+  camera:`<path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3Z"/><circle cx="12" cy="13" r="3"/>`,
+  chart:`<path d="M3 3v18h18"/><path d="M8 17V9"/><path d="M13 17V5"/><path d="M18 17v-6"/>`,
+  dollar:`<path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/>`,
+  star:`<path d="m12 2 3.1 6.4 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l6.9-1Z"/>`,
+  globe:`<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20"/><path d="M12 2a15.3 15.3 0 0 0 0 20"/>`,
+  home:`<path d="m3 10 9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/>`,
+  repeat:`<path d="m17 2 4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="m7 22-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>`,
+  megaphone:`<path d="m3 11 18-5v12L3 13Z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>`,
+  mail:`<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>`,
+  clipboard:`<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>`,
+  cart:`<circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 2h3l3.6 12.6a2 2 0 0 0 2 1.4H18a2 2 0 0 0 1.9-1.4L22 7H6"/>`,
+  check:`<path d="m20 6-11 11-5-5"/>`,
+  x:`<path d="M18 6 6 18"/><path d="m6 6 12 12"/>`,
+  search:`<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>`,
+  lock:`<rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>`,
+  box:`<path d="m21 8-9-5-9 5 9 5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/>`,
+  volume:`<path d="M11 5 6 9H2v6h4l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>`,
+  broom:`<path d="m15 4 5 5"/><path d="M14 5 4 15"/><path d="m5 14 5 5"/><path d="M3 21c3-1 5-1 8-1l-8-8c0 3 0 5-1 8Z"/>`,
+  zap:`<path d="M13 2 3 14h8l-1 8 10-12h-8Z"/>`,
+  thermometer:`<path d="M14 14.8V5a4 4 0 0 0-8 0v9.8a6 6 0 1 0 8 0Z"/>`,
+  key:`<circle cx="7.5" cy="14.5" r="3.5"/><path d="m10 12 9-9"/><path d="m15 4 3 3"/><path d="m12 7 3 3"/>`,
+  trash:`<path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="m19 6-1 14H6L5 6"/>`,
+  thumbs:`<path d="M7 10v11"/><path d="M15 5.9 14 10h5.8a2 2 0 0 1 2 2.3l-1.4 7A2 2 0 0 1 18.4 21H7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h2.8L13 3.2a1.5 1.5 0 0 1 2 2.7Z"/>`,
+  info:`<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>`
+};
+const EMOJI_ICONS = {
+  "🔧":"wrench","🛠️":"wrench","🪛":"wrench","🔨":"wrench","🏙️":"building","🏢":"building","🏗️":"building","🏠":"home","🏡":"home",
+  "💬":"message","📵":"file","🕐":"clock","⏰":"clock","🔔":"megaphone","📞":"phone","🎫":"ticket","🚨":"alert","⚠️":"alert",
+  "📅":"calendar","📷":"camera","📊":"chart","💰":"dollar","⭐":"star","★":"star","🌐":"globe","🔁":"repeat","📢":"megaphone",
+  "✉️":"mail","📋":"clipboard","🛍️":"cart","✅":"check","✓":"check","✗":"x","❌":"x","🔴":"alert","🟡":"clock","🟢":"check",
+  "🔍":"search","🔐":"lock","🔒":"lock","📦":"box","🔊":"volume","🧹":"broom","⚡":"zap","🌡️":"thermometer","🔌":"zap","🔑":"key",
+  "🐜":"alert","🍳":"home","🛁":"home","👥":"building","👍":"thumbs","💡":"info","🗑":"trash","🎉":"check","🚿":"wrench"
+};
+function icon(name,label="") {
+  const paths = ICONS[name] || ICONS.info;
+  const aria = label ? ` role="img" aria-label="${esc(label)}"` : ` aria-hidden="true"`;
+  return `<svg class="app-icon"${aria} viewBox="0 0 24 24">${paths}</svg>`;
+}
+function iconBox(name,label="",extra="") {
+  return `<span class="icon-box" ${label?`aria-label="${esc(label)}" role="img"`:`aria-hidden="true"`} style="${extra}">${icon(name)}</span>`;
+}
+function replaceEmojiText(root=document.body) {
+  const pattern = new RegExp(Object.keys(EMOJI_ICONS).sort((a,b)=>b.length-a.length).map(s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|"),"g");
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if(!node.nodeValue || !pattern.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+      pattern.lastIndex = 0;
+      const parent=node.parentElement;
+      if(parent && ["SCRIPT","STYLE","TEXTAREA","INPUT","OPTION"].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes=[];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    const frag=document.createDocumentFragment();
+    let last=0, text=node.nodeValue;
+    text.replace(pattern,(match,offset)=>{
+      if(offset>last) frag.appendChild(document.createTextNode(text.slice(last,offset)));
+      const span=document.createElement("span");
+      span.innerHTML=icon(EMOJI_ICONS[match], match);
+      frag.appendChild(span.firstElementChild);
+      last=offset+match.length;
+    });
+    if(last<text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(frag,node);
+  });
+}
 
 // ─── UI UTILITIES ─────────────────────────────────────────────
 function showScreen(id) {
   document.querySelectorAll("[id^='screen-']").forEach(el => { el.classList.remove("active"); el.style.display="none"; });
   const el = document.getElementById("screen-"+id);
   if(el) { el.style.display="flex"; el.classList.add("active"); }
+  requestAnimationFrame(()=>replaceEmojiText(el || document.body));
 }
 function toast(msg, type="success") {
   const el = document.getElementById("toast");
   el.innerHTML = (type==="error"?"⚠ ":"✓ ")+esc(msg);
   el.className = "show"+(type==="error"?" error":"");
+  replaceEmojiText(el);
   setTimeout(()=>el.className="",3000);
 }
 function avt(user,size=32) {
@@ -903,6 +1169,7 @@ function modalHTML(id,title,bodyHTML,width=560) {
 function openModal(id,title,bodyHTML,width) {
   const c=document.getElementById("modal-container");
   c.innerHTML=modalHTML(id,title,bodyHTML,width);
+  replaceEmojiText(c);
 }
 function closeModal() { document.getElementById("modal-container").innerHTML=""; }
 function confirm(title,body,onOk,danger=false) {
@@ -951,6 +1218,7 @@ function buildSidebar() {
   document.getElementById("sidebar-avatar").textContent=u.avatar;
   document.getElementById("sidebar-name").textContent=u.name;
   document.getElementById("sidebar-role").textContent=u.role+(u.unit?" · "+u.unit:"");
+  replaceEmojiText(document.getElementById("sidebar"));
 }
 function updateReminders() {
   const u=STATE.currentUser,items=[];
@@ -964,7 +1232,7 @@ function updateReminders() {
     }
   });
   const bar=document.getElementById("reminders-bar");
-  if(items.length>0){bar.style.display="block";document.getElementById("reminders-content").innerHTML=items.slice(0,3).map(i=>`<div style="font-size:12px;color:#78350f;margin-bottom:3px">${esc(i)}</div>`).join("");}
+  if(items.length>0){bar.style.display="block";document.getElementById("reminders-content").innerHTML=items.slice(0,3).map(i=>`<div style="font-size:12px;color:#78350f;margin-bottom:3px">${esc(i)}</div>`).join("");replaceEmojiText(bar);}
   else bar.style.display="none";
 }
 function navigate(page) {
@@ -1004,6 +1272,8 @@ function renderPage() {
     case "satisfaction":  renderSatisfaction();break;
     default: pc.innerHTML=emptyHTML("🚧","Coming Soon","This section is under development.");
   }
+  replaceEmojiText(pc);
+  replaceEmojiText(document.getElementById("page-action"));
 }
 
 // ─── LOGIN PAGE ────────────────────────────────────────────────
@@ -1148,14 +1418,14 @@ function renderTickets(completedOnly=false) {
   }
   pc.innerHTML=`
     <div id="ticket-filters" style="padding:10px 22px;border-bottom:1px solid var(--border);background:var(--surface);display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <input id="tf-search" placeholder="🔍  Search…" oninput="applyTicketFilters()" style="padding:7px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;flex:1;min-width:130px;outline:none"/>
+      <input id="tf-search" placeholder="Search requests…" oninput="applyTicketFilters()" style="padding:7px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;flex:1;min-width:130px;outline:none"/>
       <select id="tf-status" onchange="applyTicketFilters()" style="padding:7px 9px;border:1.5px solid var(--border);border-radius:8px;font-size:11px;outline:none">
         <option value="all">All Statuses</option>
         ${SORD.map(s=>`<option value="${s}">${SCFG[s].label}</option>`).join("")}
       </select>
       <select id="tf-urgency" onchange="applyTicketFilters()" style="padding:7px 9px;border:1.5px solid var(--border);border-radius:8px;font-size:11px;outline:none">
         <option value="all">All Urgency</option>
-        <option value="urgent">🔴 Urgent</option><option value="medium">🟡 Medium</option><option value="low">🟢 Low</option>
+        <option value="urgent">Urgent</option><option value="medium">Medium</option><option value="low">Low</option>
       </select>
       <select id="tf-type" onchange="applyTicketFilters()" style="padding:7px 9px;border:1.5px solid var(--border);border-radius:8px;font-size:11px;outline:none">
         <option value="all">All Types</option>${TYPES.map(t=>`<option value="${t}">${t}</option>`).join("")}
@@ -1861,8 +2131,8 @@ function openNewTicket() {
   const body=`
     ${fieldHTML("Issue Title",`<input id="nt-title" placeholder="e.g. Leaking sink — kitchen" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none"/>`,true,"")}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
-      ${fieldHTML("Issue Type",selHTML("nt-type",TYPES.map(t=>({v:t,l:(TICON[t]||"")+" "+t})),"Plumbing"),true,"")}
-      ${fieldHTML("Urgency",selHTML("nt-urgency",[{v:"urgent",l:"🔴 Urgent"},{v:"medium",l:"🟡 Medium"},{v:"low",l:"🟢 Low"}],"medium"),true,"")}
+      ${fieldHTML("Issue Type",selHTML("nt-type",TYPES.map(t=>({v:t,l:t})),"Plumbing"),true,"")}
+      ${fieldHTML("Urgency",selHTML("nt-urgency",[{v:"urgent",l:"Urgent"},{v:"medium",l:"Medium"},{v:"low",l:"Low"}],"medium"),true,"")}
     </div>
     ${!u.unit?fieldHTML("Unit Number",`<input id="nt-unit" placeholder="e.g. 2B" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none"/>`,true,""):""}
     ${fieldHTML("Description",`<textarea id="nt-desc" rows="4" placeholder="Describe the issue in detail…" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;resize:vertical"></textarea>`,true,"")}
@@ -2166,7 +2436,7 @@ function requestQuoteModal(name, price) {
       <div><div style="font-weight:600;font-size:13px">${esc(name)}</div><div style="font-size:11px;color:var(--inkm)">${esc(price)}</div></div>
     </div>
     <div class="field"><label>Which ticket is this for?</label>
-      <select id="rq-ticket" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--surface)">
+      <select id="rq-ticket" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var()">
         <option value="">— Select ticket —</option>
         ${STATE.tickets.filter(t=>!['completed','closed'].includes(t.status)).map(t=>`<option value="${t.id}">${t.id}: ${esc(t.title)}</option>`).join('')}
         <option value="new">New / General inquiry</option>
@@ -2282,11 +2552,13 @@ function showScreen(id) {
   document.querySelectorAll("[id^='screen-']").forEach(el => { el.classList.remove("active"); el.style.display="none"; });
   const el = document.getElementById("screen-"+id);
   if(el) { el.style.display="flex"; el.classList.add("active"); }
+  requestAnimationFrame(()=>replaceEmojiText(el || document.body));
 }
 
 window.addEventListener("DOMContentLoaded",()=>{
   showScreen("home");
   buildLoginDemos();
+  replaceEmojiText(document.body);
 });
 </script>
 </body></html>
