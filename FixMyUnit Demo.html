@@ -86,7 +86,7 @@ a{text-decoration:none}
 /* FORM ELEMENTS */
 .field{margin-bottom:14px}
 .field label{display:block;font-size:11px;font-weight:700;color:var(--inkm);margin-bottom:5px;text-transform:uppercase;letter-spacing:.07em}
-.field input,.field textarea,.field select{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--bg);color:var(--ink);font-size:13px;outline:none;font-family:'DM Sans',sans-serif}
+.field input,.field textarea,.field select{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;background:#fff;color:var(--ink);font-size:13px;outline:none;font-family:'DM Sans',sans-serif}
 .field textarea{resize:vertical}
 .field .error{color:var(--red);font-size:11px;margin-top:3px}
 
@@ -152,20 +152,22 @@ a{text-decoration:none}
 <style>
 /* FixMyUnit Green Theme - catch-all overrides */
 select, input, textarea {
-  background: #0d1f0d !important;
-  color: #ffffff !important;
-  border-color: #1f3a1f !important;
+  background: #fff !important;
+  color: var(--ink) !important;
+  border-color: var(--border) !important;
 }
-select option { background: #142b14; color: #ffffff; }
+select option { background: #fff; color: var(--ink); }
 input::placeholder, textarea::placeholder { color: #4a7a4a; }
 input[type="checkbox"], input[type="radio"] { accent-color: #2ecc71; }
 input[type="range"] { accent-color: #2ecc71; }
 /* Page content areas */
 #page-content, .screen { background: #0d1f0d; }
-/* All remaining white/light backgrounds */
-[style*="background:var(--surface)"], [style*="background: #fff"],
-[style*="background:white"], [style*="background: white"] {
-  background: #142b14 !important;
+/* Legacy theme block: keep form controls light for readability. */
+[style*="background: #fff"],
+[style*="background:#fff"],
+[style*="background:white"],
+[style*="background: white"] {
+  background: #fff !important;
 }
 /* Table styles */
 table { background: transparent; }
@@ -861,7 +863,7 @@ tbody tr:hover{background:var(--accentL)!important}
             </div>
           </div>
           <div class="field"><label>Number of Employees</label>
-            <select id="ws-cosize" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--surface)">
+            <select id="ws-cosize" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:#fff">
               <option value="2-5">2–5</option><option value="6-15">6–15</option><option value="16-50">16–50</option><option value="50+">50+</option>
             </select>
           </div>
@@ -940,7 +942,7 @@ tbody tr:hover{background:var(--accentL)!important}
 
 <!-- EMERGENCY OVERLAY -->
 <div id="em-overlay" style="position:fixed;inset:0;background:rgba(183,28,28,.88);display:none;align-items:center;justify-content:center;z-index:1100;padding:16px">
-  <div class="fade-in" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;max-width:440px;padding:32px;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.5)">
+  <div class="fade-in" style="background:var(--white);border:1px solid var(--border);border-radius:20px;width:100%;max-width:440px;padding:32px;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.5)">
     <div style="font-size:56px;margin-bottom:12px">🚨</div>
     <h2 class="serif" style="font-size:24px;font-weight:900;color:var(--red);margin-bottom:12px">Emergency Request</h2>
     <div style="background:var(--redL);border:2px solid var(--red);border-radius:12px;padding:14px 18px;margin-bottom:20px">
@@ -1217,7 +1219,7 @@ function fieldHTML(label,inputHTML,required,error) {
   return `<div class="field"><label>${esc(label)}${required?'<span style="color:var(--red)"> *</span>':''}</label>${inputHTML}${error?`<div class="error">${esc(error)}</div>`:''}</div>`;
 }
 function selHTML(id,options,val) {
-  return `<select id="${id}" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface);font-size:13px;color:var(--ink);outline:none">${options.map(o=>`<option value="${esc(o.v||o.value)}" ${(o.v||o.value)===val?"selected":""}>${esc(o.l||o.label)}</option>`).join("")}</select>`;
+  return `<select id="${id}" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;background:#fff;font-size:13px;color:var(--ink);outline:none">${options.map(o=>`<option value="${esc(o.v||o.value)}" ${(o.v||o.value)===val?"selected":""}>${esc(o.l||o.label)}</option>`).join("")}</select>`;
 }
 function card(content, style="") {
   return `<div class="card" style="${style}">${content}</div>`;
